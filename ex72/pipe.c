@@ -6,7 +6,7 @@
 /*   By: irychkov <irychkov@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 11:03:49 by irychkov          #+#    #+#             */
-/*   Updated: 2024/08/07 11:09:33 by irychkov         ###   ########.fr       */
+/*   Updated: 2024/08/07 15:53:45 by irychkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/wait.h>
+#include <errno.h>
 
 #define INITIAL_SIZE 256
 
