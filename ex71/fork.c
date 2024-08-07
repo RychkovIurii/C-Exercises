@@ -6,12 +6,13 @@
 /*   By: irychkov <irychkov@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 13:43:52 by irychkov          #+#    #+#             */
-/*   Updated: 2024/08/06 14:03:21 by irychkov         ###   ########.fr       */
+/*   Updated: 2024/08/07 11:24:22 by irychkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
+#include <sys/wait.h>
 
 int	main(void)
 {
@@ -35,12 +36,12 @@ int	main(void)
 	{	
 		/* pid = fork();
 		printf("it's a parent process with PID %d, child PID %d\n", getpid(), pid); */
-		wait();
+		wait(NULL);
 		n = 6;
 	}
 
 	if (pid != 0)
-		wait();
+		wait(NULL);
 
 
 	for (i = n; i < n + 5; i++)
