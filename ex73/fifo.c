@@ -6,7 +6,7 @@
 /*   By: irychkov <irychkov@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 11:49:03 by irychkov          #+#    #+#             */
-/*   Updated: 2024/08/08 12:25:08 by irychkov         ###   ########.fr       */
+/*   Updated: 2024/08/08 12:31:25 by irychkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@
 #include <fcntl.h>
 
 /* Opening the read or write end of a FIFO blocks until the other end is
-also opened (by another process  or  thread). USE CAT if you wanna finish the execution. */
+also opened (by another process  or  thread). USE CAT if you wanna finish the execution. Or you can switch to open("myfifo1", O_RDWR)*/
+/* We can create fifofile from command line as well (% mkfifo myfifo1) */
+
 
 int	main(int argc, char *argv[])
 {
