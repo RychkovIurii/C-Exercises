@@ -6,7 +6,7 @@
 /*   By: irychkov <irychkov@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:51:27 by irychkov          #+#    #+#             */
-/*   Updated: 2024/11/06 17:20:33 by irychkov         ###   ########.fr       */
+/*   Updated: 2024/11/06 17:22:06 by irychkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 //sum args of array with two treads
 
-int	array[10] = { 2, 3, 5, 7, 11, 24, 27, 19, 23, 29 };
+int	array[10] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
 
 void	*routine(void *arg)
 {
