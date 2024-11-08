@@ -6,7 +6,7 @@
 /*   By: irychkov <irychkov@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:08:46 by irychkov          #+#    #+#             */
-/*   Updated: 2024/11/07 18:51:56 by irychkov         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:59:56 by irychkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <sys/syscall.h>
 
 #define THREAD_NUM 2
 
@@ -21,6 +22,8 @@ void	*routine(void *arg)
 {
 	pthread_t th = pthread_self();
 	printf("%lu is identifier from routine pthread\n", th);
+	// !process id and thread id are different
+	printf("%d is from gettid\n", (pid_t) syscall(SYS_gettid));
 }
 
 int	main(int ac, char *av[])
